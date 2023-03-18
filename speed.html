@@ -14,5 +14,22 @@
         <a href="grade.html">graders-page</a>
         <a href="HOME.html">HOME-page</a>
     </nav>
+    <input id="carspeed"/>
+    <button onclick="Convert()">speed</button>
+    <h3 id="kmPerDemeritPointDisplay"></h3>
+    <script>
+        const speed = 80;
+        const speedLimit = 70;
+        const kmPerDemeritPoint = 5;
+        if (speed <= speedLimit) {
+        console.log("Ok");
+        } else {
+        const demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
+        console.log(`Demerit points: ${demeritPoints}`);
+        }
+        console.log(speed)
+        gradeDisplay.innerText=`Your qulifacation points is ${kmPerDemeritPoint}`;
+        
+    </script>
 </body>
 </html>
