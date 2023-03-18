@@ -25,8 +25,15 @@ nav{
     font-style: oblique;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-display: gold;
-    text-align: right;
+    text-align: left;
     padding-inline-end: 5px;
     word-spacing: 10px;
 
+}
+.button{
+    align-self: center;
+    font-style: italic;
+    font-size: 49px;
+    padding-left: 50px;
+    display: flex;
 }

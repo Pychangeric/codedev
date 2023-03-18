@@ -3,17 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="HOME.css"/>
-    <script src="grade.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Converter</title>
 </head>
 <body>
-    <nav>
-        <a href="KRA.html">KRA-page</a>
-        <a href="HOME.html">HOME-page</a>
-        <a href="speed.html">speed-page</a>
-    </nav>
-    
+    <input id="numericGrade"/>
+    <button onclick="Convert()">Convert</button>
+    <h3 id="gradeDisplay"></h3>
+    <script>
+        const numericGrade=document.getElementById(
+            'numericGrade'
+        );
+        const gradeDisplay=document.getElementById(
+            'gradeDisplay'
+        )
+       function Convert(){
+        const numeric=parseInt(numericGrade.value);
+        let grade;
+        if(numeric>=80){
+            grade='A';
+        }
+        else if(numeric>=60){
+            grade='B';
+        }
+        else if (numeric>=50){
+            grade='C';
+        }
+        else if(numeric>=40) {
+             grade='D';
+        }
+        else{grade='E'
+        }
+        console.log(grade)
+        gradeDisplay.innerText=`Your qulifacation grade is ${grade}`;
+       }
+    </script>
 </body>
 </html>
