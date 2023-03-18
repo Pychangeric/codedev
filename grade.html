@@ -17,12 +17,14 @@
     <button onclick="Convert()">Convert</button>
     <h3 id="gradeDisplay"></h3>
     <script>
+        //getting sources of infomation
         const numericGrade=document.getElementById(
             'numericGrade'
         );
         const gradeDisplay=document.getElementById(
             'gradeDisplay'
         )
+        //awarding untion to execute grades
        function Convert(){
         const numeric=parseInt(numericGrade.value);
         let grade;
@@ -40,6 +42,7 @@
         }
         else{grade='E'
         }
+        //way for it to display results
         console.log(grade)
         gradeDisplay.innerText=`Your qulifacation grade is ${grade}`;
        }
