@@ -9,10 +9,46 @@
     <title>Document</title>
 </head>
 <body>
+    <input id="netSalary"/>
+    <input id="Total benefits "/>
+    <button onclick="basicSalary()">netSalary</button>
+    <h3 id="NetDisplay"></h3>
     <nav>
         <a href="HOME.html">HOME-page</a>
         <a href="speed.html">SPEED-page</a>
         <a href="grade.html">GRADE-page</a>
     </nav>
+    <script>
+        // constants for basic salary,tax, NHIF and NSSF rates
+const BASIC_SALARY = 150000;
+const TAX_RATE = 0.3;
+const NHIF_RATE = 0.075;
+const NSSF_RATE = 0.055;
+
+// basic salary and benefits
+const basicSalary = parseFloat(prompt("Enter basic salary: "));
+const benefits = parseFloat(prompt("Enter the total amount of benefits received: "));
+
+// gross salary
+const grossSalary = BASIC_SALARY + basicSalary + benefits;
+
+//deductions
+const taxDeduction = grossSalary * TAX_RATE;
+const nhifDeduction = grossSalary * NHIF_RATE;
+const nssfDeduction = grossSalary * NSSF_RATE;
+
+//net salary
+const netSalary = grossSalary - taxDeduction - nhifDeduction - nssfDeduction;
+
+//results from calculations
+console.log(`Gross salary: ${grossSalary.toFixed(2)}`);
+console.log(`Tax deduction: ${taxDeduction.toFixed(2)}`);
+console.log(`NHIF deduction: ${nhifDeduction.toFixed(2)}`);
+console.log(`NSSF deduction: ${nssfDeduction.toFixed(2)}`);
+console.log(`Net salary: ${netSalary.toFixed(2)}`);
+
+console.log(netSalary)
+NetDisplay.innerText=`Your salary is ${netSalary}`;
+    </script>
 </body>
 </html>
