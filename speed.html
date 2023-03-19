@@ -14,22 +14,33 @@
         <a href="grade.html">graders-page</a>
         <a href="HOME.html">HOME-page</a>
     </nav>
-    <input id="carspeed"/>
-    <button onclick="Convert()">speed</button>
-    <h3 id="kmPerDemeritPointDisplay"></h3>
+    <form>
+		<label for="speed">vehicle speed (in km/h): </label>
+		<input type="number" id="speed" name="speed" required>
+		<button type="submit">check points!</button>
+	</form>
+	<p id="result"></p>
     <script>
-        const speed = 80;
-        const speedLimit = 70;
-        const kmPerDemeritPoint = 5;
-        if (speed <= speedLimit) {
-        console.log("Ok");
-        } else {
-        const demeritPoints = Math.floor((speed - speedLimit) / kmPerDemeritPoint);
-        console.log(`Demerit points: ${demeritPoints}`);
-        }
-        console.log(speed)
-        gradeDisplay.innerText=`Your qulifacation points is ${kmPerDemeritPoint}`;
-        
+  document.querySelector('form').addEventListener('submit', function(e) {
+			e.preventDefault(); // This is for form sub
+
+			// The confirmtion of speed
+			let vehiclespeed = parseInt(document.getElementById('speed').value);
+
+			// do away with point execution
+			let Points = 0;
+			if (vehiclespeed <= 70) {
+				document.getElementById('result').textContent = "Ok";
+			} else {
+				Points = Math.floor((vehiclespeed - 70) / 5);
+				if (Points > 12) {
+					document.getElementById('result').textContent = "License suspended";
+				} else {
+					document.getElementById('result').textContent = "Your vehicle speeding points are, " + Points;
+				}
+			}
+		});
+     
     </script>
 </body>
 </html>

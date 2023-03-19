@@ -1,11 +1,12 @@
 # Grading,speed detector,KRA
 *****
-### Author : 17 march 2023
+### Eric mutembei : 17 march 2023
 ****
 ## Project Description
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+This is a project designed for making calculations for certain system these systems include:
+grading system where the system run commads for entry marks and awards grades respectively.
+The net salary system calculates all deduction of payee to give net salary.
+the speed detector is system with capability to check and execute command for speed regulations.
 ******
 
 ## SCREENSHOTS
@@ -16,7 +17,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 ********
 ## SetUp Instruction
 ### Requirements
-* [Lang](lang Url)
+* [eng](lang Url)
 * [Framework](Framework URL)
 * Text editor eg [Visual Studio Code](https://code.visualstudio.com/download)
 * [Testing Platform](Platform URL)
@@ -44,20 +45,18 @@ Then run server with the above command
 Or you can access the web application directly via this [LINK.](link.com/)
 *****
 ## Dependencies
-- Package Name
-- Package Name
-- Package Name
-- Package Name
+- mozilla
+- google
+- w3 school
+- chrome
 *****
 ## Technologies Used
 1. HTML
-2. MdBootstrap
-3. HTML
-4. CSS
-5. JavaScript
+2. CSS
+3.JavaScript
 *****
 ## Contact Information
-* Email : example@gmail.com
+* Email : pychangeric@gmail.com
 *****
 ## [License](LICENSE)
 MIT License
